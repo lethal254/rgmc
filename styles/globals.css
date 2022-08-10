@@ -1,3 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  .button-solid {
+    @apply bg-orange-300 uppercase px-3 py-1 rounded-lg font-medium hover:brightness-110 transition-all duration-150 ease-linear w-fit;
+  }
+  .button-outlined {
+    @apply bg-transparent border-2 border-orange-300 p-2 w-fit rounded-lg hover:bg-orange-300 hover:bg-opacity-50 transist;
+  }
+  .transist {
+    @apply transition-all duration-150 ease-linear;
+  }
+  .input {
+    @apply p-3 outline-none  border-2 border-orange-200 bg-transparent rounded-md w-full mt-4 mb-4 focus:bg-transparent;
+  }
+  body {
+    @apply text-gray-50;
+  }
+}
+body {
+  font-family: "Open Sans", sans-serif !important;
+}
+
+.hide-scroll-bar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scroll-bar {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge add Firefox */
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none; /* Firefox */
+}
