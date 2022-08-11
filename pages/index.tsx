@@ -8,6 +8,7 @@ import {
 import Image from "next/image"
 import AliceCarousel from "react-alice-carousel"
 import Footer from "../components/Footer"
+import { motion } from "framer-motion"
 
 const Home: NextPage = () => {
   const responsive = {
@@ -124,60 +125,87 @@ const Home: NextPage = () => {
           {/* Hero content */}
           <div className='h-full flex items-center z-10 relative'>
             <div>
-              <h2 className='text-6xl lg:text-9xl font-bold text-orange-200'>
+              <motion.h2
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5 }}
+                className='text-6xl lg:text-9xl font-bold text-orange-200'>
                 RGMC
-              </h2>
-              <h3 className='text-3xl mt-4 mb-4 font-medium'>
+              </motion.h2>
+              <motion.h3
+                className='text-3xl mt-4 mb-4 font-medium'
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: 0.7 }}>
                 Safaris and Car <br /> Renting
-              </h3>
-              <div className='flex md:items-center md:space-x-4 space-x-0 flex-col md:flex-row space-y-4 md:space-y-0'>
+              </motion.h3>
+              <motion.div
+                className='flex md:items-center md:space-x-4 space-x-0 flex-col md:flex-row space-y-4 md:space-y-0'
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: 0.9 }}>
                 <p>The easiest and fastest way to rent a car.</p>
                 <div className='h-1 bg-orange-300 w-20'></div>
                 <button className='button-outlined'>Book a car</button>
-              </div>
+              </motion.div>
             </div>
           </div>
         </section>
         {/* Why choose RGMC */}
 
-        <section className='bg-zinc-900 min-h-[60vh] flex flex-col items-center mt-10 px-6 md:px-0'>
-          <h2 className='text-2xl md:text-3xl font-semibold '>
+        <section className=' min-h-[60vh]  flex flex-col items-center mt-10 px-6 md:px-0 '>
+          <h2 className='text-2xl md:text-3xl font-semibold   text-orange-300 '>
             Why choose RGMC
           </h2>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-[100%] md:w-[80%] lg:w-[80%] mt-20  space-x-6 space-y-6 md:space-y-4 lg:space-y-0'>
-            <div className='flex items-center flex-col p-4 '>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-[100%] md:w-[80%] lg:w-[80%] mt-10 lg:mt-20  md:space-x-6 space-y-6 md:space-y-4 lg:space-y-0  h-full '>
+            <motion.div
+              className='flex items-center py-6 flex-col p-4 h-full  justify-center hoveranim'
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1, delay: 0.5 }}>
               <BsFillCheckSquareFill className='text-center text-3xl text-orange-300' />
               <h3 className='text-xl font-semibold mb-6 mt-6'>
                 Fast and Easy Booking
               </h3>
-              <p className='leading-loose tracking-wider  text-center'>
+              <p className='leading-loose tracking-wider  text-center md:w-[70%] text-sm md:text-base'>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud.
               </p>
-            </div>
-            <div className='flex items-center flex-col bg-gray-50 p-4 rounded-lg text-zinc-800'>
+            </motion.div>
+            <motion.div
+              className='flex items-center py-6 flex-col bg-gray-200 p-4 rounded-lg text-zinc-800 justify-center'
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1, delay: 0.7 }}>
               <BsFillPinMapFill className='text-center text-3xl text-orange-300' />
               <h3 className='text-xl font-semibold mb-6 mt-6'>
                 Many Pickup Locations
               </h3>
-              <p className='leading-loose tracking-wider text-center'>
+              <p className='leading-loose tracking-wider text-center md:w-[70%] text-sm md:text-base'>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud.
               </p>
-            </div>
-            <div className='flex items-center flex-col'>
-              <BsFillEmojiSmileFill className='text-center text-3xl text-orange-300' />
+            </motion.div>
+            <motion.div
+              className='flex items-center py-6 flex-col justify-center hoveranim'
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1, delay: 0.9 }}>
+              <BsFillEmojiSmileFill className='text-center text-3xl text-orange-300 ' />
               <h3 className='text-xl font-semibold mb-6 mt-6'>
                 Satisfied Customers
               </h3>
-              <p className='leading-loose tracking-wider  text-center'>
+              <p className='leading-loose tracking-wider  text-center md:w-[70%] text-sm md:text-base'>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud.
               </p>
-            </div>
+            </motion.div>
           </div>
         </section>
 

@@ -16,6 +16,12 @@
   .input {
     @apply p-3 outline-none  border-2 border-orange-200 bg-transparent rounded-md w-full mt-4 mb-4 focus:bg-transparent;
   }
+  .hoveranim {
+    @apply hover:bg-gray-50 hover:bg-opacity-20 transition-all duration-150 ease-linear cursor-pointer rounded-lg;
+  }
+  .active-button {
+    @apply button-solid capitalize;
+  }
   body {
     @apply text-gray-50;
   }

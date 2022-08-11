@@ -11,12 +11,15 @@ import { toast } from "react-toastify"
 
 interface Props {
   cars: []
+  categories: [{ [key: string]: any }]
 }
 
-const Shop = ({ cars }: Props) => {
+const Shop = ({ cars: garis, categories }: Props) => {
   const [open, setOpen] = useState(false)
+  const [cars, setCars] = useState(garis)
   const [showCheckout, setShowCheckout] = useState(false)
   const [activeCar, setActiveCar] = useState({})
+  const [activeCategory, setActiveCategory] = useState("all")
 
   console.log(activeCar)
 
@@ -41,7 +44,21 @@ const Shop = ({ cars }: Props) => {
     setShowCheckout(true)
   }
 
-  console.log(activeCar)
+  const handleCategoryChange = async (category: string) => {
+    setActiveCategory(category)
+    if (category !== "all") {
+      const newCars = await Client.fetch(
+        `*[_type =='cars' && "${category}" in [category->category]]`
+      )
+
+      console.log(newCars)
+      setCars(newCars)
+    } else {
+      const newCars = await Client.fetch(`*[_type =='cars']`)
+      setCars(newCars)
+    }
+  }
+  console.log(cars)
   return (
     <>
       <Header />
@@ -65,24 +82,45 @@ const Shop = ({ cars }: Props) => {
       {/* Container */}
       <div className='bg-zinc-900 min-h-[100vh] text-gray-50 flex md:flex-row flex-col pt-24 md:space-x-10 px-4 md:px-0 min-w-full '>
         <ul className='flex whitespace-nowrap max-w-full overflow-x-scroll items-center space-x-3 md:hidden p-2 hide-scroll-bar'>
-          <li className='w-fit p-2 bg-orange-300 rounded-lg'>All vehicles</li>
-          <li>Sedans</li>
-          <li>Suvs</li>
-          <li>Minivans</li>
-          <li>Pickups</li>
-          <li>Sedans</li>
-          <li>Suvs</li>
-          <li>Minivans</li>
-          <li>Pickups</li>
+          <>
+            <button
+              onClick={() => handleCategoryChange("all")}
+              className={`${activeCategory === "all" ? "active-button" : ""}`}>
+              All vehicles
+            </button>
+            {categories.map((category) => (
+              <button
+                onClick={() => handleCategoryChange(category?.category)}
+                className={`${
+                  activeCategory === category?.category ? "active-button" : ""
+                }`}>
+                {category?.category}
+              </button>
+            ))}
+          </>
         </ul>
         {/* Sidenav */}
+
         <div className='w-[15%] bg-zinc-800 sticky left-0 top-20 h-[100vh] hidden md:block'>
           <ul className=' h- h-full flex items-center flex-col space-y-5 py-6'>
-            <li className='w-fit p-2 bg-orange-300 rounded-lg'>All vehicles</li>
-            <li>Sedans</li>
-            <li>Suvs</li>
-            <li>Minivans</li>
-            <li>Pickups</li>
+            <>
+              <button
+                onClick={() => handleCategoryChange("all")}
+                className={`${
+                  activeCategory === "all" ? "active-button" : ""
+                }`}>
+                All vehicles
+              </button>
+              {categories.map((category) => (
+                <button
+                  onClick={() => handleCategoryChange(category?.category)}
+                  className={`${
+                    activeCategory === category?.category ? "active-button" : ""
+                  }`}>
+                  {category?.category}
+                </button>
+              ))}
+            </>
           </ul>
         </div>
         {/* Main */}
@@ -109,9 +147,10 @@ export default Shop
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const cars = await Client.fetch(`*[_type =='cars']`)
-  console.log(cars)
+  const categories = await Client.fetch(`*[_type == "categories"]`)
+  console.log(categories)
 
   return {
-    props: { cars },
+    props: { cars, categories },
   }
 }
