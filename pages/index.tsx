@@ -19,7 +19,7 @@ const Home: NextPage = () => {
   const items = [
     <div>
       <img
-        src='/colo2.jpg'
+        src='/time1.jpg'
         role='presentation'
         className='h-[80vh] object-cover relative'
         width='100%'
@@ -30,7 +30,7 @@ const Home: NextPage = () => {
         <div className='flex space-x-3 items-center mb-10'>
           <div className='h-12 w-2 bg-orange-300'></div>
           <h2 className='text-2xl md:text-4xl font-semibold tracking-wider'>
-            GET UPTO A MONTH OF CARS RIGHT HERE
+            GET CARS OF UPTO A MONTH OF RENTING RIGHT HERE
           </h2>
         </div>
         <button className='button-outlined px-3'>Try it</button>
@@ -39,7 +39,7 @@ const Home: NextPage = () => {
 
     <div>
       <img
-        src='/bg2.jpg'
+        src='/slide1.jpeg'
         role='presentation'
         className='h-[80vh] object-cover relative'
         width='100%'
@@ -50,17 +50,57 @@ const Home: NextPage = () => {
         <div className='flex space-x-3 items-center mb-10'>
           <div className='h-12 w-2 bg-orange-300'></div>
           <h2 className='text-2xl md:text-4xl font-semibold tracking-wider'>
-            GET UPTO A MONTH OF CARS RIGHT HERE
+            EXPERIENCE QUALITY CARS FROM US
           </h2>
         </div>
-        <button className='button-outlined px-3'>Try it</button>
+        <button className='button-outlined px-3'>Rent now</button>
+      </div>
+    </div>,
+
+    <div>
+      <img
+        src='/getcars.jpg'
+        role='presentation'
+        className='h-[80vh] object-cover relative'
+        width='100%'
+      />
+      <div className='bg-zinc-900 absolute top-0 left-0 w-[100%] h-[100%] bg-opacity-60 z-2'></div>
+
+      <div className='absolute top-[30%] left-[50%] -translate-x-[50%] flex items-center flex-col '>
+        <div className='flex space-x-3 items-center mb-10'>
+          <div className='h-12 w-2 bg-orange-300'></div>
+          <h2 className='text-2xl md:text-4xl font-semibold tracking-wider'>
+            DON'T DREAM IT, DRIVE IT!
+          </h2>
+        </div>
+        <button className='button-outlined px-3'>Rent now</button>
+      </div>
+    </div>,
+
+    <div>
+      <img
+        src='/sell.jpg'
+        role='presentation'
+        className='h-[80vh] object-cover relative'
+        width='100%'
+      />
+      <div className='bg-zinc-900 absolute top-0 left-0 w-[100%] h-[100%] bg-opacity-60 z-2'></div>
+
+      <div className='absolute top-[30%] left-[50%] -translate-x-[50%] flex items-center flex-col '>
+        <div className='flex space-x-3 items-center mb-10'>
+          <div className='h-12 w-2 bg-orange-300'></div>
+          <h2 className='text-2xl md:text-4xl font-semibold tracking-wider'>
+            BUY YOUR DREAM CAR TODAY
+          </h2>
+        </div>
+        <button className='button-outlined px-3'> Buy</button>
       </div>
     </div>,
   ]
   const items2 = [
     <div className='md:mr-4'>
       <img
-        src='/bg.jpg'
+        src='/wedding.jpg'
         role='presentation'
         className='h-[60vh] object-cover relative'
         width='100%'
@@ -78,7 +118,7 @@ const Home: NextPage = () => {
 
     <div className='md:mr-4'>
       <img
-        src='/bg2.jpg'
+        src='/near.jpg'
         role='presentation'
         className='h-[60vh] object-cover relative'
         width='100%'
@@ -88,12 +128,13 @@ const Home: NextPage = () => {
         View
       </button>
       <div className='  h-24 w-[100%] bg-orange-300 z-10 relative flex items-center justify-center'>
-        <h3 className='text-xl font-semibold'>Car sales</h3>
+        <h3 className='text-xl font-semibold'>Cars near you</h3>
       </div>
     </div>,
+
     <div className='md:mr-4'>
       <img
-        src='/bg.jpg'
+        src='/airport.jpg'
         role='presentation'
         className='h-[60vh] object-cover relative'
         width='100%'
@@ -107,6 +148,23 @@ const Home: NextPage = () => {
         <h3 className='text-xl font-semibold'>Airport car</h3>
       </div>
     </div>,
+    <div className='md:mr-4'>
+      <img
+        src='/cab.jpg'
+        role='presentation'
+        className='h-[60vh] object-cover relative'
+        width='100%'
+      />
+      <div className='bg-zinc-900 absolute top-0 left-0 w-[100%] h-[100%] bg-opacity-60 z-2'></div>
+
+      <button className='button-outlined px-6 absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%]'>
+        View
+      </button>
+
+      <div className='h-24 w-[100%] bg-orange-300 z-10 relative flex items-center justify-center '>
+        <h3 className='text-xl font-semibold'>Cabs</h3>
+      </div>
+    </div>,
   ]
   return (
     <>
@@ -116,7 +174,7 @@ const Home: NextPage = () => {
         <section
           className='h-[100vh] px-6 md:px-12 bg-no-repeat'
           style={{
-            background: `url("background.jpg")`,
+            background: `url("all.jpg")`,
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
             backgroundPosition: "right center",
@@ -168,7 +226,7 @@ const Home: NextPage = () => {
               <h3 className='text-xl font-semibold mb-6 mt-6'>
                 Fast and Easy Booking
               </h3>
-              <p className='leading-loose tracking-wider  text-center md:w-[70%] text-sm md:text-base'>
+              <p className='leading-loose tracking-wider  text-center'>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud.
@@ -184,7 +242,7 @@ const Home: NextPage = () => {
               <h3 className='text-xl font-semibold mb-6 mt-6'>
                 Many Pickup Locations
               </h3>
-              <p className='leading-loose tracking-wider text-center md:w-[70%] text-sm md:text-base'>
+              <p className='leading-loose tracking-wider text-center'>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud.
@@ -200,7 +258,7 @@ const Home: NextPage = () => {
               <h3 className='text-xl font-semibold mb-6 mt-6'>
                 Satisfied Customers
               </h3>
-              <p className='leading-loose tracking-wider  text-center md:w-[70%] text-sm md:text-base'>
+              <p className='leading-loose tracking-wider  text-center'>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud.
@@ -220,7 +278,7 @@ const Home: NextPage = () => {
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mt-6'>
             <div className='h-full w-[100%]'>
               <Image
-                src={"/bg.jpg"}
+                src={"/bg2.jpg"}
                 alt='Blog image'
                 width='100%'
                 height='80%'
@@ -248,7 +306,7 @@ const Home: NextPage = () => {
             </div>
             <div className='h-full w-[100%]'>
               <Image
-                src={"/suv.jpg"}
+                src={"/suv2.jpg"}
                 alt='Blog image'
                 width='100%'
                 height='80%'
@@ -262,7 +320,7 @@ const Home: NextPage = () => {
             </div>
             <div className='h-full w-[100%]'>
               <Image
-                src={"/pickup.jpg"}
+                src={"/pickup2.jpg"}
                 alt='Blog image'
                 width='100%'
                 height='80%'
@@ -294,20 +352,19 @@ const Home: NextPage = () => {
           <div className='flex space-x-3 items-center'>
             <div className='h-12 w-2 bg-orange-300'></div>
             <h2 className='text-2xl md:text-3xl font-semibold'>
-              Browse by category
+              Best services for car renters
             </h2>
           </div>
           <div className='w-[100%] lg:w-[50%] mt-6 leading-loose tracking-wide'>
             <p>
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae ab illo inventore veritatis et quasi architecto beatae vitae
-              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-              aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-              eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
-              est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
-              velit, sed quia non numquam eius modi tempora incidunt ut labore
-              et dolore magnam aliquam quaerat voluptatem.
+              Because we’ll make you more money with customer-focused,
+              convincing copy that sells harder. Nemo enim ipsam voluptatem quia
+              voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur
+              magni dolores eos qui ratione voluptatem sequi nesciunt. Neque
+              porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+              consectetur, adipisci velit, sed quia non numquam eius modi
+              tempora incidunt ut labore et dolore magnam aliquam quaerat
+              voluptatem.
             </p>
             <button className='button-solid mt-6'>Rent out</button>
           </div>
