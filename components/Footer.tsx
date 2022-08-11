@@ -15,17 +15,18 @@ const Footer = () => {
         <div className='flex space-x-3  text-sm md:text-base'>
           <HiLocationMarker className='text-orange-300 text-xl' />
           <p>
-            43 Moi Avenue,
-            <br /> Big towers, 6th floor Nairobi, <br /> Kenya
+            Trm drive,
+            <br /> Nairobi,
+            <br /> Kenya
           </p>
         </div>
         <div className='flex space-x-3 items-center text-sm md:text-base'>
           <BsFillTelephoneFill className='text-orange-300 text-xl' />
-          <p>+25470002456</p>
+          <p>+254 742 492095</p>
         </div>
         <div className='flex space-x-3 items-center text-sm md:text-base'>
           <HiMail className='text-orange-300 text-xl' />
-          <p>grmc@gmail.com</p>
+          <p>rgmcsafarisandcarrental@gmail.com</p>
         </div>
       </div>
       <div className='flex-1 flex flex-col items-center mb-4'>
