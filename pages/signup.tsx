@@ -42,7 +42,7 @@ const Signup = () => {
     <>
       <Header />
       <div
-        className='w-screen min-h-screen flex  justify-center   fixed top-0 left-0'
+        className='w-screen min-h-screen flex  justify-center   absolute top-0 left-0'
         style={{
           background: `url("/bg.jpg")`,
           backgroundRepeat: "no-repeat",
@@ -51,7 +51,7 @@ const Signup = () => {
         }}>
         <div className='bg-zinc-900 absolute top-0 left-0 w-[100%] h-[100%] bg-opacity-90 z-2'></div>
 
-        <div className='flex items-center mt-10 md:mt-32 flex-col  md:w-[50%] z-10 absolute top-[10%]  md:top-[5%] left-[50%] -translate-x-[50%]  w-full px-6 h-full'>
+        <div className='flex items-center  md:mt-32 flex-col  md:w-[50%] z-10 absolute top-[10%]  md:top-[5%] left-[50%] -translate-x-[50%]  w-full px-6 h-full'>
           <h1 className='text-2xl font-semibold mb-10'>Create Account</h1>
           <form onSubmit={onSignup} className='h-full'>
             <div className='space-x-0 flex flex-col md:flex-row md:space-x-5 '>
@@ -101,12 +101,6 @@ const Signup = () => {
               Create account
             </button>
           </form>
-          <p className='mt-4'>
-            Already have an account ?
-            <Link href='/login'>
-              <a className='text-orange-300'> Login</a>
-            </Link>
-          </p>
         </div>
       </div>
     </>

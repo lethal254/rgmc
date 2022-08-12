@@ -363,14 +363,16 @@ const Home: NextPage = () => {
           </div>
           <div className='w-[100%] lg:w-[50%] mt-6 leading-loose tracking-wide'>
             <p>
-              Because we’ll make you more money with customer-focused,
-              convincing copy that sells harder. Nemo enim ipsam voluptatem quia
-              voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur
-              magni dolores eos qui ratione voluptatem sequi nesciunt. Neque
-              porro quisquam est, qui dolorem ipsum quia dolor sit amet,
-              consectetur, adipisci velit, sed quia non numquam eius modi
-              tempora incidunt ut labore et dolore magnam aliquam quaerat
-              voluptatem.
+              We welcome those car owners who wish to earn a little extra money
+              from their cars laying around by renting out their vehicles to us.
+              We'll make you more money with our customer-focuse and services.
+              To seal the agreement between you the owner and us, we shall
+              provide our lawyer to help fill the agreement details and ensure
+              that the law is followed. There will be no delay in payments from
+              us after the agreed payment days. The specifications of the
+              car-for-hire include the car type, model, color and any other
+              descriptions including photos which will be used to fill the
+              details form.
             </p>
             <Link href='/shop/all'>
               <button className='button-solid mt-6'>Rent out</button>

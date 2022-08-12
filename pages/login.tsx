@@ -55,7 +55,7 @@ const Login = () => {
         <div className='bg-zinc-900 absolute top-0 left-0 w-[100%] h-[100%] bg-opacity-90 z-2'></div>
 
         <div className='flex items-center mt-10 md:mt-32 flex-col  md:w-[50%] z-10 absolute  top-[30%] left-[50%] -translate-x-[50%] -translate-y-[50%] w-full px-6'>
-          <h1 className='text-2xl font-semibold mb-10 '>Login</h1>
+          <h1 className='text-2xl font-semibold mb-10 mt-10 '>Login</h1>
           <form onSubmit={handleLogin}>
             <input
               type='email'
@@ -83,7 +83,7 @@ const Login = () => {
           </form>
           <p className='mt-4'>
             Don't have an account ?
-            <Link href='/login'>
+            <Link href='/signup'>
               <a className='text-orange-300'> Sign up</a>
             </Link>
           </p>
