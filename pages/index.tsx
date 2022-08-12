@@ -9,6 +9,7 @@ import Image from "next/image"
 import AliceCarousel from "react-alice-carousel"
 import Footer from "../components/Footer"
 import { motion } from "framer-motion"
+import Link from "next/link"
 
 const Home: NextPage = () => {
   const responsive = {
@@ -33,7 +34,9 @@ const Home: NextPage = () => {
             GET CARS OF UPTO A MONTH OF RENTING RIGHT HERE
           </h2>
         </div>
-        <button className='button-outlined px-3'>Try it</button>
+        <Link href='/shop/all'>
+          <button className='button-outlined px-3'>Try it</button>
+        </Link>
       </div>
     </div>,
 
@@ -53,7 +56,9 @@ const Home: NextPage = () => {
             EXPERIENCE QUALITY CARS FROM US
           </h2>
         </div>
-        <button className='button-outlined px-3'>Rent now</button>
+        <Link href='/shop/all'>
+          <button className='button-outlined px-3'>Try it</button>
+        </Link>{" "}
       </div>
     </div>,
 
@@ -73,7 +78,9 @@ const Home: NextPage = () => {
             DON'T DREAM IT, DRIVE IT!
           </h2>
         </div>
-        <button className='button-outlined px-3'>Rent now</button>
+        <Link href='/shop/all'>
+          <button className='button-outlined px-3'>Try it</button>
+        </Link>{" "}
       </div>
     </div>,
 
@@ -105,13 +112,9 @@ const Home: NextPage = () => {
         className='h-[60vh] object-cover relative'
         width='100%'
       />
-      <div className='bg-zinc-900 absolute top-0 left-0 w-[100%] h-[100%] bg-opacity-60 z-2'></div>
+      <div className='bg-zinc-900 absolute top-0 left-0 w-[100%] h-[100%] bg-opacity-50 z-2'></div>
 
-      <button className='button-outlined px-6 absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%]'>
-        View
-      </button>
-
-      <div className='h-24 w-[100%] bg-orange-300 z-10 relative flex items-center justify-center '>
+      <div className='h-16 w-[100%] bg-orange-300 z-10 relative flex items-center justify-center '>
         <h3 className='text-xl font-semibold'>Wedding car rental</h3>
       </div>
     </div>,
@@ -124,10 +127,8 @@ const Home: NextPage = () => {
         width='100%'
       />
       <div className='bg-zinc-900 absolute top-0 left-0 w-[100%] h-[100%] bg-opacity-60 z-2'></div>
-      <button className='button-outlined px-6 absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%]'>
-        View
-      </button>
-      <div className='  h-24 w-[100%] bg-orange-300 z-10 relative flex items-center justify-center'>
+
+      <div className='  h-16 w-[100%] bg-orange-300 z-10 relative flex items-center justify-center'>
         <h3 className='text-xl font-semibold'>Cars near you</h3>
       </div>
     </div>,
@@ -140,11 +141,8 @@ const Home: NextPage = () => {
         width='100%'
       />
       <div className='bg-zinc-900 absolute top-0 left-0 w-[100%] h-[100%] bg-opacity-60 z-2'></div>
-      <button className='button-outlined px-6 absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%]'>
-        View
-      </button>
 
-      <div className='h-24 w-[100%] bg-orange-300 z-10 relative flex items-center justify-center'>
+      <div className='h-16 w-[100%] bg-orange-300 z-10 relative flex items-center justify-center'>
         <h3 className='text-xl font-semibold'>Airport car</h3>
       </div>
     </div>,
@@ -157,11 +155,7 @@ const Home: NextPage = () => {
       />
       <div className='bg-zinc-900 absolute top-0 left-0 w-[100%] h-[100%] bg-opacity-60 z-2'></div>
 
-      <button className='button-outlined px-6 absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%]'>
-        View
-      </button>
-
-      <div className='h-24 w-[100%] bg-orange-300 z-10 relative flex items-center justify-center '>
+      <div className='h-16 w-[100%] bg-orange-300 z-10 relative flex items-center justify-center '>
         <h3 className='text-xl font-semibold'>Cabs</h3>
       </div>
     </div>,
@@ -211,7 +205,7 @@ const Home: NextPage = () => {
         </section>
         {/* Why choose RGMC */}
 
-        <section className=' min-h-[60vh]  flex flex-col items-center mt-10 px-6 md:px-0 '>
+        <section className=' min-h-[70vh]  flex flex-col items-center mt-10 px-6 md:px-0 '>
           <h2 className='text-2xl md:text-3xl font-semibold   text-orange-300 '>
             Why choose RGMC
           </h2>
@@ -226,10 +220,11 @@ const Home: NextPage = () => {
               <h3 className='text-xl font-semibold mb-6 mt-6'>
                 Fast and Easy Booking
               </h3>
-              <p className='leading-loose tracking-wider  text-center'>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud.
+              <p className='leading-loose tracking-wider  text-center text-sm md:text-base'>
+                It's fast and easy to hire a car from us with our booking system
+                which is user-friendly and equipped with the latest generation
+                features to ensure secure and convenient access to the required
+                information.
               </p>
             </motion.div>
             <motion.div
@@ -242,10 +237,11 @@ const Home: NextPage = () => {
               <h3 className='text-xl font-semibold mb-6 mt-6'>
                 Many Pickup Locations
               </h3>
-              <p className='leading-loose tracking-wider text-center'>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud.
+              <p className='leading-loose tracking-wider text-center text-sm md:text-base'>
+                Pick the car from any location through our friendly staff who
+                can drop off the car at the terminal of your choice. Once you
+                are ready to hand back the keys, simply meet our team at a
+                prearranged time andd place.
               </p>
             </motion.div>
             <motion.div
@@ -258,10 +254,11 @@ const Home: NextPage = () => {
               <h3 className='text-xl font-semibold mb-6 mt-6'>
                 Satisfied Customers
               </h3>
-              <p className='leading-loose tracking-wider  text-center'>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud.
+              <p className='leading-loose tracking-wider  text-center text-sm md:text-base'>
+                Excellent service from start to finish. From friendly staff who
+                really want to help you, to excellent low mileage vehicles, one
+                could not ask for more.
+                <br /> - James Kirui(Customer)
               </p>
             </motion.div>
           </div>
@@ -276,62 +273,71 @@ const Home: NextPage = () => {
             </h2>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mt-6'>
-            <div className='h-full w-[100%]'>
-              <Image
-                src={"/bg2.jpg"}
-                alt='Blog image'
-                width='100%'
-                height='80%'
-                objectFit='cover'
-                layout='responsive'
-                priority
-              />
-              <div className=' bg-orange-300 p-2 text-center'>
-                <h2 className=' font-semibold text-2xl'>All</h2>
+            <Link href='/shop/all'>
+              <div className='h-full w-[100%] cursor-pointer'>
+                <Image
+                  src={"/bg2.jpg"}
+                  alt='Blog image'
+                  width='100%'
+                  height='80%'
+                  objectFit='cover'
+                  layout='responsive'
+                  priority
+                />
+                <div className=' bg-orange-300 p-2 text-center'>
+                  <h2 className=' font-semibold text-xl'>All</h2>
+                </div>
               </div>
-            </div>
-            <div className='h-full w-[100%]'>
-              <Image
-                src={"/sedan.jpg"}
-                alt='Blog image'
-                width='100%'
-                height='80%'
-                objectFit='cover'
-                layout='responsive'
-                priority
-              />
-              <div className=' bg-orange-300 p-2 text-center'>
-                <h2 className=' font-semibold text-2xl'>Sedan</h2>
+            </Link>
+            <Link href='/shop/Sedan'>
+              <div className='h-full w-[100%] cursor-pointer'>
+                <Image
+                  src={"/sedan.jpg"}
+                  alt='Blog image'
+                  width='100%'
+                  height='80%'
+                  objectFit='cover'
+                  layout='responsive'
+                  priority
+                />
+                <div className=' bg-orange-300 p-2 text-center'>
+                  <h2 className=' font-semibold text-xl'>Sedan</h2>
+                </div>
               </div>
-            </div>
-            <div className='h-full w-[100%]'>
-              <Image
-                src={"/suv2.jpg"}
-                alt='Blog image'
-                width='100%'
-                height='80%'
-                objectFit='cover'
-                layout='responsive'
-                priority
-              />
-              <div className=' bg-orange-300 p-2 text-center'>
-                <h2 className=' font-semibold text-2xl'>SUV</h2>
+            </Link>
+            <Link href='/shop/SUV'>
+              <div className='h-full w-[100%] cursor-pointer'>
+                <Image
+                  src={"/suv2.jpg"}
+                  alt='Blog image'
+                  width='100%'
+                  height='80%'
+                  objectFit='cover'
+                  layout='responsive'
+                  priority
+                />
+                <div className=' bg-orange-300 p-2 text-center'>
+                  <h2 className=' font-semibold text-xl'>SUV</h2>
+                </div>
               </div>
-            </div>
-            <div className='h-full w-[100%]'>
-              <Image
-                src={"/pickup2.jpg"}
-                alt='Blog image'
-                width='100%'
-                height='80%'
-                objectFit='cover'
-                layout='responsive'
-                priority
-              />
-              <div className=' bg-orange-300 p-2 text-center'>
-                <h2 className=' font-semibold text-2xl'>Pickup</h2>
+            </Link>
+
+            <Link href='/shop/Pickup'>
+              <div className='h-full w-[100%] cursor-pointer'>
+                <Image
+                  src={"/pickup2.jpg"}
+                  alt='Blog image'
+                  width='100%'
+                  height='80%'
+                  objectFit='cover'
+                  layout='responsive'
+                  priority
+                />
+                <div className=' bg-orange-300 p-2 text-center'>
+                  <h2 className=' font-semibold text-xl'>Pickup</h2>
+                </div>
               </div>
-            </div>
+            </Link>
           </div>
         </section>
 
@@ -341,7 +347,7 @@ const Home: NextPage = () => {
             mouseTracking
             autoPlay
             infinite
-            animationDuration={1000}
+            animationDuration={4000}
             disableButtonsControls
             autoPlayInterval={2000}
             items={items}
@@ -366,7 +372,9 @@ const Home: NextPage = () => {
               tempora incidunt ut labore et dolore magnam aliquam quaerat
               voluptatem.
             </p>
-            <button className='button-solid mt-6'>Rent out</button>
+            <Link href='/shop/all'>
+              <button className='button-solid mt-6'>Rent out</button>
+            </Link>
           </div>
         </section>
 

@@ -1,13 +1,14 @@
 import React, { useContext, useState } from "react"
-import Header from "../components/Header"
+import Header from "../../components/Header"
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs"
-import Card from "../components/Card"
-import AboutCarModal from "../components/AboutCar"
-import CheckoutModal from "../components/Checkout"
+import Card from "../../components/Card"
+import AboutCarModal from "../../components/AboutCar"
+import CheckoutModal from "../../components/Checkout"
 import { GetServerSideProps } from "next"
-import Client from "../sanity"
-import { Context } from "../context"
+import Client from "../../sanity"
+import { Context } from "../../context"
 import { toast } from "react-toastify"
+import { useRouter } from "next/router"
 
 interface Props {
   cars: []
@@ -20,8 +21,9 @@ const Shop = ({ cars: garis, categories }: Props) => {
   const [showCheckout, setShowCheckout] = useState(false)
   const [activeCar, setActiveCar] = useState({})
   const [activeCategory, setActiveCategory] = useState("all")
-
-  console.log(activeCar)
+  const router = useRouter()
+  const categoryFromUrl = router.query.url
+  console.log(categoryFromUrl)
 
   const {
     state: { user },
@@ -58,7 +60,6 @@ const Shop = ({ cars: garis, categories }: Props) => {
       setCars(newCars)
     }
   }
-  console.log(cars)
   return (
     <>
       <Header />
@@ -145,10 +146,18 @@ const Shop = ({ cars: garis, categories }: Props) => {
 
 export default Shop
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
-  const cars = await Client.fetch(`*[_type =='cars']`)
+export const getServerSideProps: GetServerSideProps = async (context: any) => {
+  let cars: string[] = []
+
+  const category = context.params.url
+  if (category !== "all") {
+    cars = await Client.fetch(
+      `*[_type =='cars' && "${category}" in [category->category]]`
+    )
+  } else {
+    cars = await Client.fetch(`*[_type =='cars']`)
+  }
   const categories = await Client.fetch(`*[_type == "categories"]`)
-  console.log(categories)
 
   return {
     props: { cars, categories },

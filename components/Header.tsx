@@ -42,7 +42,7 @@ const Header = () => {
         </li>
 
         <li>
-          <Link href='/shop'>
+          <Link href='/shop/all'>
             <a className='hover:text-orange-200 transist '>Shop</a>
           </Link>
         </li>
