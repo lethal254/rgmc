@@ -7,8 +7,8 @@ import { toast } from "react-toastify"
 import Header from "../components/Header"
 
 const Login = () => {
-  const [email, setEmail] = useState("benardogutu65@gmail.com")
-  const [password, setPassword] = useState("lethalone")
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
 
   const {
     state: { user },

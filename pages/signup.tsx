@@ -6,10 +6,10 @@ import { Context } from "../context"
 import Header from "../components/Header"
 
 const Signup = () => {
-  const [firstName, setFirstName] = useState("ben")
-  const [lastName, setLastName] = useState("ogutu")
-  const [password, setPassword] = useState("lethalone")
-  const [email, setEmail] = useState("benardogutu65@gmail.com")
+  const [firstName, setFirstName] = useState("")
+  const [lastName, setLastName] = useState("")
+  const [password, setPassword] = useState("")
+  const [email, setEmail] = useState("")
   const [checked, setChecked] = useState(false)
 
   const onSignup = async (e: SyntheticEvent): Promise<void> => {
