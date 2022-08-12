@@ -49,7 +49,7 @@ const AboutCarModal = ({
 
   let items = []
   if (activeCar && activeCar.images?.length > 0) {
-    items = activeCar.images?.map((image) => (
+    items = activeCar.images?.map((image: string) => (
       <div
         className='w-full min-h-[50vh] rounded-lg h-full'
         style={{

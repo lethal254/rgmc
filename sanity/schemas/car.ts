@@ -32,13 +32,13 @@ export default {
       name: "buyingPrice",
       type: "number",
       title: "Price",
-      hidden: ({ document }) => !document.forPurchase,
+      hidden: ({ document }: { [key: string]: any }) => !document.forPurchase,
     },
     {
       name: "rentingPrice",
       type: "number",
       title: "Price per day",
-      hidden: ({ document }) => !document.forRent,
+      hidden: ({ document }: { [key: string]: any }) => !document.forRent,
     },
     {
       name: "series",
