@@ -64,7 +64,7 @@ const Home: NextPage = () => {
 
     <div>
       <img
-        src='/getcars.jpg'
+        src='/rodger.jpeg'
         role='presentation'
         className='h-[80vh] object-cover relative'
         width='100%'
@@ -241,7 +241,7 @@ const Home: NextPage = () => {
                 Pick the car from any location through our friendly staff who
                 can drop off the car at the terminal of your choice. Once you
                 are ready to hand back the keys, simply meet our team at a
-                prearranged time andd place.
+                prearranged time and place.
               </p>
             </motion.div>
             <motion.div
