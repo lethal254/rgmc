@@ -29,11 +29,18 @@ const Footer = () => {
       <div className='flex-1 flex flex-row md:flex-col items-center mb-6 w-full justify-between md:w-fit '>
         {/* Social media icons */}
         <div className='flex space-x-4 text-2xl'>
-          <Link href=''>
+          <Link href='https://twitter.com/Rgmc_Adventure'>
             <a
               target='_blank'
               className='cursor-pointer transist hover:text-orange-300 '>
               <BsTwitter />
+            </a>
+          </Link>
+          <Link href='https://m.facebook.com/people/Rgmc-Safari-Car-Rentals/100083282935535/'>
+            <a
+              target='_blank'
+              className='cursor-pointer transist hover:text-orange-300 '>
+              <BsFacebook />
             </a>
           </Link>
           <Link href='https://instagram.com/rgmc_safaris_and_car_rentals?igshid=YmMyMTA2M2Y='>
