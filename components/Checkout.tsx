@@ -5,6 +5,7 @@ import { FormEventHandler, useState } from "react"
 import imageUrlBuilder from "@sanity/image-url"
 import client from "../sanity"
 import { toast } from "react-toastify"
+import Link from "next/link"
 
 const style = {
   position: "absolute" as "absolute",
@@ -183,7 +184,7 @@ const CheckoutModal = ({
                   onChange={() => acceptTerms()}
                   className='  w-5 h-5  accent-orange-200 rounded-md'
                 />
-                <p>Accepts Terms and Conditions</p>
+                <Link href='/t&c'>Accepts Terms and Conditions</Link>
               </div>
             </div>
           </section>
