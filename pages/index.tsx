@@ -198,7 +198,9 @@ const Home: NextPage = () => {
                 transition={{ duration: 0.5, delay: 0.9 }}>
                 <p>The easiest and fastest way to rent a car.</p>
                 <div className='h-1 bg-orange-300 w-20'></div>
-                <button className='button-outlined'>Book a car</button>
+                <Link href='/shop/all'>
+                  <button className='button-outlined'>Book a car</button>
+                </Link>
               </motion.div>
             </div>
           </div>
